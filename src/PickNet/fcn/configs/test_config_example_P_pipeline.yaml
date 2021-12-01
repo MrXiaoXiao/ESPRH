@@ -1,0 +1,73 @@
+# location of snapshot and tensorbaord summary events
+save_dir: ../models/PickNet/P_wave/
+# location where to put the generated pickings during testing
+test_output: ./None/
+# training batch size, decide with your GPU size
+batch_size_train: 1
+# validation batch size, ran every val_interval
+batch_size_val: 5
+
+batch_size_test: 100
+# split training data for trainig/validation
+train_split: 0.95
+# maximum iterations to run epoc == 30k/batch_size
+max_iterations: 800005
+# optimizer params (not used currently Adam is used by default)
+optimizer: 'adam'
+optimizer_params:
+    learning_rate: 0.001
+    weight_decay: 0.0002
+# Loss for layer fusion
+loss_weights: 1.0
+# save snapshot every save_interval iterations
+save_interval: 1000
+# validate on held out dataset
+val_interval: 1000
+# print loss every print_interval
+print_interval: 100
+# learning rate decay (Not used with Adam currently)
+learning_rate_decay: 0.1
+# Apply weighted_cross_entropy_loss to outputs from each side layer
+# Setting to false only loss after last conv layer is computed
+deep_supervision: True
+# Targets are continous if True else binary {0, 1}
+target_regression: True
+
+training:
+    filename: NOT_FOR_TRAINING
+    #
+    length_before: 400
+    data_width: 1200
+    data_height: 1
+    n_channels: 1
+    trace_per_collect: 4
+    rand_dev: 300
+# testing data
+testing:
+    filename: FileName
+    data_width: 1200
+    data_height: 1
+    n_channels: 1
+    limit_left: 400
+    limit_right: 800
+# use snapshot after test_snapshot intervals for testing
+test_snapshot: 330000
+# Apply testing_threshold after sigmoid
+testing_threshold: 0.8
+#available choices: HED, SRN, PickNet
+using_model: PickNet
+#block1 conv size
+b1_convh: 1
+b1_convw: 32
+#block2 conv size
+b2_convh: 1
+b2_convw: 16
+#block3 conv size
+b3_convh: 1
+b3_convw: 8
+#block4 conv size
+b4_convh: 1
+b4_convw: 4
+#block5 conv size
+b5_convh: 1
+b5_convw: 2

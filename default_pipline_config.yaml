@@ -1,0 +1,93 @@
+TASKID: example
+
+DataDownload:
+  start_time: '2017-02-01 00:00:00.00'
+  end_time: '2017-02-02 00:00:00.00'
+  channel_list: ["HH[ZNE]", "HH[Z21]", "BH[ZNE]","BH[Z21]","EH[ZNE]","EH[Z21]","SH[Z21]","SH[ZNE]","HN[ZNE]", "HN[Z23]"]
+  exclude_network: ['SY']
+  minlat: 61.0
+  maxlat: 65.0
+  minlon: -148.0
+  maxlon: -143.0  
+  client_list: ["IRIS"]
+  sta_json_name: 'station_list.json'
+  data_save_name: 'ori_data'
+
+EqT:
+  mseed_dir: 'ori_data'
+  sta_json_path: 'station_list.json'
+  overlap: 0.3
+  n_processor: 8
+  det_res: detection_results
+  model_path: '../models/EqT/EqT_model.h5'
+  gpuid: '3'
+  number_of_sampling: 5
+  EQ_threshold: 0.3
+  P_threshold: 0.1
+  S_threshold: 0.1
+  txt_folder: ./EqTPicks/
+  STAXML: 'ori_dataxml'
+
+S_EqT:
+  txt_folder: ./SEqTPicks/
+  P_branch_config: '../src/S_EqT_codes/configs/P_branch.yaml'
+  P_branch_model: '../models/S_EqT/S_EqT_P_branch.hdf5'
+  P_threshold: 0.1
+  P_skip_threshold: 0.8
+  keep_time_range_P: 8.0
+  S_branch_config: '../src/S_EqT_codes/configs/S_branch.yaml'
+  S_branch_model: '../models/S_EqT/S_EqT_S_branch.hdf5'
+  S_threshold: 0.1
+  S_skip_threshold: 0.8
+  keep_time_range_S: 16.0
+  max_search_distance: 110
+  exist_range: 20.0
+
+PickNet:
+  txt_folder: ./PickNetPicks/
+
+REAL:
+  ref_time: '2017-02-01'
+  save_sta: 'sta_info_real_format.dat'
+  year: ["\"2017\""]
+  mon: ["\"02\""]
+  day: ["\"01\""]
+  R: "\"0.2/100/0.03/5/0.01\""
+  G: "\"0.5/100/0.01/5\""
+  V: "\"6.3/3.4/2.0/1.5/0\""
+  S: "\"3/1/4/1/2.0/0/5.0/5.0\""
+  station: "\"./sta_info_real_format.dat\""
+  ttime: "\"../REAL_scripts/tt_db/ttdb.txt\""
+  eqt_dir: "./EqTPicks/"
+  eqt_catalog_dir: "./EqTCatalogs/"
+  seqt_dir: "./SEqTPicks/"
+  seqt_catalog_dir: "./SEqTCatalogs/"
+  picknet_dir: "./PickNetPicks/"
+  picknet_catalog_dir: "./PickNetCatalogs/"
+
+HypoInverse:
+  save_sta: '../HypoInverse_scripts/HYPO_use.dat'
+  save_pha_eqt: '../HypoInverse_scripts/HYPO_use_eqt.pha'
+  save_pha_seqt: '../HypoInverse_scripts/HYPO_use_seqt.pha'
+  save_pha_picknet: '../HypoInverse_scripts/HYPO_use_picknet.pha'
+  eqt_event_dict: 'eqt_real_e_dict.npy'
+  seqt_event_dict: 'seqt_real_e_dict.npy'
+  picknet_event_dict: 'picknet_real_e_dict.npy'
+  lat_sign: 1.0
+  lon_sign: -1.0
+
+VIS:
+  profile_start_lat: 65.0
+  profile_start_lon: -148.0
+  profile_end_lat: 61.0
+  profile_end_lon: -143.0
+
+  MAXDEP: 100.0
+  MINLAT: 61.0
+  MAXLAT: 65.0
+  MINLON: -148.0
+  MAXLON: -143.0
+  MAXERH: 10.0
+  MAXERZ: 10.0
+  MAXAZM: 270
+  profile_range: 50.0
