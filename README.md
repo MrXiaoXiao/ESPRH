@@ -18,7 +18,7 @@ pip install keras-rectified-adam
 
 Unzip the package and enter the directory. Execute scripts 00-06. Customize your configurations in file default_pipline_config.yaml.
 
-## 应用该流程的工作 Related research
+## 相关的工作 Related research
 [1] Xueshan Wu, Song Huang, Zhuowei Xiao, Yuan Wang. (2021, Under Reveiw). Building precise local submarine earthquake catalogs via a deep-learning-empowered workflow and its application to the Challenger Deep.
 
 [2] Shun Yang, Zhuowei Xiao, Yue Zhu, Yumei He, Mingming Jiang, Chit Thet Mon, Guangbing Hou, Myo Thant, Kyaing Sein. (2021, In Preparation). A deep-learning-empowered pipeline for building regional earthquake catalogs and its application to the central Myanmar region.
