@@ -15,14 +15,17 @@ pip install keras-rectified-adam
 
 ## 使用说明 Usage
 解压文件然后进入目录，依次执行脚本00-06，在default_pipline_config.yaml修改对应参数。
+
 Unzip the package and enter the directory. Execute scripts 00-06. Customize your configurations in file default_pipline_config.yaml.
 
 ## 应用该流程的工作 Related research
 [1] Xueshan Wu, Song Huang, Zhuowei Xiao, Yuan Wang. (2021, Under Reveiw). Building precise local submarine earthquake catalogs via a deep-learning-empowered workflow and its application to the Challenger Deep.
+
 [2] Shun Yang, Zhuowei Xiao, Yue Zhu, Yumei He, Mingming Jiang, Chit Thet Mon, Guangbing Hou, Myo Thant, Kyaing Sein. (2021, In Preparation). A deep-learning-empowered pipeline for building regional earthquake catalogs and its application to the central Myanmar region.
 
 ## 引用 Citation
 如果你使用改脚本，请在文章中引用以下工作：
+
 If you use the S-EqT codes in your research, please cite:
 
 Zhuowei Xiao, Jian Wang*, Chang Liu, Juan Li, Liang Zhao, and Zhenxing Yao. (2021). Siamese Earthquake Transformer: A pair-input deep-learning model for earthquake detection and phase picking on a seismic array. Journal of Geophysics Research: Solid Earth. https://doi.org/10.1029/2020JB021444
@@ -45,6 +48,7 @@ Fred W Klein. (2002). Userʼs Guide to HYPOINVERSE-2000, a Fortran Program to So
 
 ## 问题反馈 Bug report
 如果遇到程序上的问题，请在这个repo开启一个issue（尽量不要邮件联系）。
+
 If you occur any bugs or questions, you can open a new issue in this repo. 
 
 ## 致谢 Acknowledgments
