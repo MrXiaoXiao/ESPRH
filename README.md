@@ -10,10 +10,15 @@ conda install python=3.6 tensorflow-gpu=1.14 keras-gpu=2.3.1 h5py=2.10 matplotli
 conda install -c conda-forge obspy
 pip install keras-rectified-adam
 ```
+注：只是推理的话不需要GPU也可执行，则将对应的tensorflow-gpu, keras-gpu换成tensorflow, keras。并且不要安装 cudatoolkit和cudnn。
 
 ## 使用说明 Usage
 解压文件然后进入目录，依次执行脚本00-06，在default_pipline_config.yaml修改对应参数。
 Unzip the package and enter the directory. Execute scripts 00-06. Customize your configurations in file default_pipline_config.yaml.
+
+## 应用该流程的工作 Related research
+[1] Xueshan Wu, Song Huang, Zhuowei Xiao, Yuan Wang. (2021, Under Reveiw). Building precise local submarine earthquake catalogs via a deep-learning-empowered workflow and its application to the Challenger Deep.
+[2] Shun Yang, Zhuowei Xiao, Yue Zhu, Yumei He, Mingming Jiang, Chit Thet Mon, Guangbing Hou, Myo Thant, Kyaing Sein. (2021, In Preparation). A deep-learning-empowered pipeline for building regional earthquake catalogs and its application to the central Myanmar region.
 
 ## 引用 Citation
 如果你使用改脚本，请在文章中引用以下工作：
