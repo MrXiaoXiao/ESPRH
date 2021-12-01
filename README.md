@@ -1,6 +1,7 @@
 # ESPRH
-区域地震目录自动构建流程脚本，整合了开源的各个模块，用于从连续波形自动构建区域地震目录
-Automatic regional-scale earthquake catalog building workflow: EQTransformer + Siamese EQTransformer + PickNet + REAL + HypoInverse
+区域地震目录自动构建流程脚本，整合了开源的各个模块，用于从连续波形自动构建区域地震目录。
+
+Automatic regional-scale earthquake catalog building workflow: EQTransformer + Siamese EQTransformer + PickNet + REAL + HypoInverse.
 
 ## 安装说明 Installation
 ```Bash
