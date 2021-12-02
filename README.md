@@ -62,6 +62,9 @@ Fred W Klein. (2002). Userʼs Guide to HYPOINVERSE-2000, a Fortran Program to So
 
 If you occur any bugs or questions, you can open a new issue in this repo. 
 
+## 邮箱 E-mail
+xiaozhuowei@mail.iggcas.ac.cn
+
 ## 致谢 Acknowledgments
 We would like to thank S. Mostafa Mousavi and his colleagues for developing the EqT model (https://github.com/smousavi05/EQTransformer), which is the base of our S-EqT model.
 
