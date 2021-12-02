@@ -21,6 +21,9 @@ git clone https://github.com/MrXiaoXiao/ESPRH
 cd ESPRH
 ```
 
+REAL和HypoInverse的安装请参照它们对应的说明.HypoInverse在bin下的文件名请设置为‘hyp1.40'.
+
+
 ## 使用说明 Usage
 进入目录，依次执行脚本00-06，在default_pipline_config.yaml修改对应参数。
 
