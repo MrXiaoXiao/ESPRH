@@ -47,7 +47,7 @@ Zhuowei Xiao, Jian Wang*, Chang Liu, Juan Li, Liang Zhao, and Zhenxing Yao. (202
 
 PickNet for phase refinement:
 
-Wang, J.*, Xiao, Z.*, Liu, C., Zhao, D., & Yao, Z. (2019). Deep Learning for Picking Seismic Arrival Times. Journal of Geophysical Research: Solid Earth, 124(7), 6612–6624. https://doi.org/10.1029/2019JB017536
+Wang, J., Xiao, Z., Liu, C., Zhao, D., & Yao, Z. (2019). Deep Learning for Picking Seismic Arrival Times. Journal of Geophysical Research: Solid Earth, 124(7), 6612–6624. https://doi.org/10.1029/2019JB017536
 
 REAL for linking seismic phases:
 
