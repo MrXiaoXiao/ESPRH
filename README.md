@@ -5,18 +5,26 @@ Automatic regional-scale earthquake catalog building workflow: EQTransformer + S
 
 ## 安装说明 Installation
 ```Bash
-conda create -n seqt
-conda activate seqt
+conda create -n ESPRH
+conda activate ESPRH
 conda install python=3.6 tensorflow-gpu=1.14 keras-gpu=2.3.1 h5py=2.10 matplotlib=3.2 pyyaml cudatoolkit cudnn pandas tqdm pyproj jupyter notebook basemap
 conda install -c conda-forge obspy
 pip install keras-rectified-adam
 ```
 注：只是推理的话不需要GPU也可执行，则将对应的tensorflow-gpu, keras-gpu换成tensorflow, keras。并且不要安装 cudatoolkit和cudnn。
 
-## 使用说明 Usage
-解压文件然后进入目录，依次执行脚本00-06，在default_pipline_config.yaml修改对应参数。
+复制该程序包到你的计算机。
+Clone this project to your machine. 
 
-Unzip the package and enter the directory. Execute scripts 00-06. Customize your configurations in file default_pipline_config.yaml.
+```bash
+git clone https://github.com/MrXiaoXiao/ESPRH
+cd ESPRH
+```
+
+## 使用说明 Usage
+进入目录，依次执行脚本00-06，在default_pipline_config.yaml修改对应参数。
+
+Enter the directory. Execute scripts 00-06. Customize your configurations in file default_pipline_config.yaml.
 
 ## 相关的工作 Related research
 [1] Xueshan Wu, Song Huang, Zhuowei Xiao, Yuan Wang. (2021, Under Reveiw). Building precise local submarine earthquake catalogs via a deep-learning-empowered workflow and its application to the Challenger Deep.
@@ -24,15 +32,15 @@ Unzip the package and enter the directory. Execute scripts 00-06. Customize your
 [2] Shun Yang, Zhuowei Xiao, Yue Zhu, Yumei He, Mingming Jiang, Chit Thet Mon, Guangbing Hou, Myo Thant, Kyaing Sein. (2021, In Preparation). A deep-learning-empowered pipeline for building regional earthquake catalogs and its application to the central Myanmar region.
 
 ## 引用 Citation
-如果你使用改脚本，请在文章中引用以下工作：
+如果你使用该脚本，请在文章中引用以下工作：
 
-If you use the S-EqT codes in your research, please cite:
-
-Zhuowei Xiao, Jian Wang*, Chang Liu, Juan Li, Liang Zhao, and Zhenxing Yao. (2021). Siamese Earthquake Transformer: A pair-input deep-learning model for earthquake detection and phase picking on a seismic array. Journal of Geophysics Research: Solid Earth. https://doi.org/10.1029/2020JB021444
-
-and
+For EQTransformer, please cite:
 
 S. Mostafa Mousavi, William L Ellsworth, Weiqiang Zhu, Lindsay Y Chuang, and Gregory C Beroza. (2020). Earthquake transformer—an attentive deep-learning model for simultaneous earthquake detection and phase picking. Nature Communications 11, 3952. https://doi.org/10.1038/s41467-020-17591-w
+
+For Siamese EQTransformer, please cite:
+
+Zhuowei Xiao, Jian Wang*, Chang Liu, Juan Li, Liang Zhao, and Zhenxing Yao. (2021). Siamese Earthquake Transformer: A pair-input deep-learning model for earthquake detection and phase picking on a seismic array. Journal of Geophysics Research: Solid Earth. https://doi.org/10.1029/2020JB021444
 
 PickNet for phase refinement:
 
