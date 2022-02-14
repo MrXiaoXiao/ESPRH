@@ -30,7 +30,7 @@ REAL和HypoInverse的安装请参照它们对应的说明.HypoInverse在bin下�
 Enter the directory. Execute scripts 00-06. Customize your configurations in file default_pipline_config.yaml.
 
 ## 相关的工作 Related research
-[1] Xueshan Wu, Song Huang, Zhuowei Xiao, Yuan Wang. (2021, Under Reveiw). Building precise local submarine earthquake catalogs via a deep-learning-empowered workflow and its application to the Challenger Deep.
+[1] Wu, Xueshan; Huang, Song; Xiao, Zhuowei; Wang, Yuan (2022): Building Precise Local Submarine Earthquake Catalogs via a Deep-Learning-Empowered Workflow and its Application to the Challenger Deep. Frontiers. Collection. https://doi.org/10.3389/feart.2022.817551 
 
 [2] Shun Yang, Zhuowei Xiao, Yue Zhu, Yumei He, Mingming Jiang, Chit Thet Mon, Guangbing Hou, Myo Thant, Kyaing Sein. (2021, In Preparation). A deep-learning-empowered pipeline for building regional earthquake catalogs and its application to the central Myanmar region.
 
