@@ -60,7 +60,6 @@ Fred W Klein. (2002). Userʼs Guide to HYPOINVERSE-2000, a Fortran Program to So
 ## 近期更新计划
 1. 增加02_run_S-EqT步骤的并行加速
 2. 增加计算里氏震级（根据震相计算对应于窗内振幅再输入到REAL里面）
-(最近事情有点多，大概预计3.1之前更新上）
 
 ## 问题反馈 Bug report
 如果遇到程序上的问题，请在这个repo开启一个issue（尽量不要邮件联系）。
