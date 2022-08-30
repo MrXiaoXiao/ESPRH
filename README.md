@@ -29,9 +29,10 @@ REAL和HypoInverse的安装请参照它们对应的说明.HypoInverse在bin下�
 
 Enter the directory. Execute scripts 00-06. Customize your configurations in file default_pipline_config.yaml.
 
-# 常见问题说明 FAQ
+## 常见问题说明 FAQ
 (1) 目前代码只老版本的REAL, 请使用REAL_scripts文件夹里面的REAL_old_version.zip。
     Current codes support only the old version of REAL. Please use 'REAL_old_version' under the 'REAL_scripts' folder;
+    
 (2) 在一些机器上perl可能需要添加执行权限，请为REAL_scripts文件夹里面的runREAL_temp.pl增加执行权限。
     Some computers may need permission for Perl scripts. Please add permission to execute for 'runREAL_temp.pl' under the 'REAL_scripts' folder.
 
