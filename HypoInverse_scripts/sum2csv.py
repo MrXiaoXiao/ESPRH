@@ -1,4 +1,3 @@
-# modified from https://github.com/YijianZhou/Hypo-Interface-Py
 """ Format hypoInverse output: sum file to csv files
 """
 import glob, os
@@ -22,6 +21,14 @@ out_pha = open(cfg.out_pha,'w')
 
 def write_csv(fout, line):
     codes = line.split()
+    if line[32] == 'E':
+        lon_flag = 1.0
+    elif line[32] == 'W':
+        lon_flag = -1.0
+    else:
+        print(line[32])
+        lon_flag = 1.0
+
     date, hrmn, sec = codes[0:3]
     dtime = date + hrmn + sec.zfill(5)
     lat_deg = float(line[20:22])
@@ -29,7 +36,7 @@ def write_csv(fout, line):
     lat = lat_deg + lat_min/60
     lon_deg = float(line[29:32])
     lon_min = float(line[33:38])
-    lon = lon_deg + lon_min/60
+    lon = (lon_deg + lon_min/60)*lon_flag
     dep = float(line[38:44])
     mag = float(line[48:52]) - mag_corr
     fout.write('{},{:.4f},{:.4f},{:.1f},{:.1f}\n'.format(dtime, lat, lon, dep+grd_ele, mag))

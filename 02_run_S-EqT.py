@@ -37,14 +37,15 @@ if __name__ == '__main__':
 
     import tensorflow as tf
     import keras.backend.tensorflow_backend as KTF
-    def get_session(gpu_fraction=0.5):
-        gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=gpu_fraction)
-        return tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
-    KTF.set_session(get_session())
+    if cfgs['S_EqT']['limit_gpu_usage']:
+        def get_session(gpu_fraction=0.5):
+            gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=gpu_fraction)
+            return tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+        KTF.set_session(get_session(gpu_fraction = cfgs['S_EqT']['gpu_fraction']))
 
     # build phase dict using EqT results
     phase_dict, station_list = build_phase_dict_from_EqT(cfgs)
-    
+
     # load s-eqt models -- P branch
     P_branch_cfgs = yaml.load(open(cfgs['S_EqT']['P_branch_config'],'r'),Loader=yaml.SafeLoader)
     encode_model, siamese_model, EqT_model = S_EqT_Concate_RSRN_Model(P_branch_cfgs)

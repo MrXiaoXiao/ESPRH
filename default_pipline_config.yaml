@@ -42,9 +42,13 @@ S_EqT:
   keep_time_range_S: 16.0
   max_search_distance: 110
   exist_range: 20.0
+  limit_gpu_usage: False
+  gpu_fraction: 0.5
 
 PickNet:
   txt_folder: ./PickNetPicks/
+  limit_gpu_usage: False
+  gpu_fraction: 0.5
 
 REAL:
   ref_time: '2017-02-01'

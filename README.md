@@ -29,6 +29,13 @@ REAL和HypoInverse的安装请参照它们对应的说明.HypoInverse在bin下�
 
 Enter the directory. Execute scripts 00-06. Customize your configurations in file default_pipline_config.yaml.
 
+# 常见问题说明 FAQ
+(1) 目前代码只老版本的REAL, 请使用REAL_scripts文件夹里面的REAL_old_version.zip。
+    Current codes support only the old version of REAL. Please use 'REAL_old_version' under the 'REAL_scripts' folder;
+(2) 在一些机器上perl可能需要添加执行权限，请为REAL_scripts文件夹里面的runREAL_temp.pl增加执行权限。
+    Some computers may need permission for Perl scripts. Please add permission to execute for 'runREAL_temp.pl' under the 'REAL_scripts' folder.
+
+
 ## 相关的工作 Related research
 [1] Wu, Xueshan; Huang, Song; Xiao, Zhuowei; Wang, Yuan (2022): Building Precise Local Submarine Earthquake Catalogs via a Deep-Learning-Empowered Workflow and its Application to the Challenger Deep. Frontiers. Collection. https://doi.org/10.3389/feart.2022.817551 
 
@@ -57,9 +64,9 @@ HypoInverse for locating earthquakes:
 
 Fred W Klein. (2002). Userʼs Guide to HYPOINVERSE-2000, a Fortran Program to Solve for Earthquake Locations and Magnitudes 4/2002 version. USGS, Open File Report 02-171 Version, 1, 123.
 
-## 近期更新计划
+## (拖延症的)近期更新计划
 1. 增加02_run_S-EqT步骤的并行加速
-2. 增加计算里氏震级（根据震相计算对应于窗内振幅再输入到REAL里面）
+2. 增加计算里氏震级（好像obspy有内置函数，回头加一下）。有需要的也可以自己加一下（https://docs.obspy.org/packages/autogen/obspy.signal.invsim.estimate_magnitude.html）。
 
 ## 问题反馈 Bug report
 如果遇到程序上的问题，请在这个repo开启一个issue（尽量不要邮件联系）。

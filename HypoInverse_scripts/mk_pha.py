@@ -1,4 +1,3 @@
-# modified from https://github.com/YijianZhou/Hypo-Interface-Py
 """ Make input phase file for hypoInverse (COP 3 format)
 """
 from obspy import UTCDateTime
@@ -9,8 +8,8 @@ cfg = config.Config()
 fpha = cfg.fpha_in 
 f=open(fpha); lines =f.readlines(); f.close()
 fout = open(cfg.fpha_out,'w')
-lat_code = cfg.lat_code
-lon_code = cfg.lon_code
+#lat_code = cfg.lat_code
+#lon_code = cfg.lon_code
 mag_corr = cfg.mag_corr # hypoInv do not support neg mag
 p_wht = cfg.p_wht
 s_wht = cfg.s_wht
@@ -29,6 +28,15 @@ for i,line in enumerate(lines):
     ot = UTCDateTime(ot)
     date, time = split_datetime(ot)
     mag = max(float(mag) + mag_corr, 0.)
+    if float(lon) > 0:
+        lon_code = 'E'
+    else:
+        lon_code = 'W'
+
+    if float(lat) > 0:
+        lat_code = 'N'
+    else:
+        lat_code = 'S'
     lat = abs(float(lat))
     lon = abs(float(lon))
     lon_deg = int(lon)

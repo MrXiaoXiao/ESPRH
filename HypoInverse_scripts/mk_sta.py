@@ -1,4 +1,3 @@
-# modified from https://github.com/YijianZhou/Hypo-Interface-Py
 """ Make input station file for hypoInverse
 """
 import config
@@ -7,13 +6,23 @@ import config
 cfg = config.Config()
 fsta = cfg.fsta_in 
 fout = open(cfg.fsta_out,'w')
-lat_code = cfg.lat_code
-lon_code = cfg.lon_code
+#lat_code = cfg.lat_code
+#lon_code = cfg.lon_code
 f=open(fsta); lines=f.readlines(); f.close()
 
 for line in lines:
     net_sta, lat, lon, ele, _ = line.split('\t')
     net, sta = net_sta.split('.')
+    if float(lon) > 0:
+        lon_code = 'E'
+    else:
+        lon_code = 'W'
+
+    if float(lat) > 0:
+        lat_code = 'N'
+    else:
+        lat_code = 'S'
+
     lon = abs(float(lon))
     lat = abs(float(lat))
     ele = int(float(ele))
