@@ -32,12 +32,14 @@ if __name__ == '__main__':
     os.chdir(task_dir)
     import tensorflow as tf
     import keras.backend.tensorflow_backend as KTF
+    
     if cfgs['PickNet']['limit_gpu_usage']:
         def get_session(gpu_fraction=0.5):
             gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=gpu_fraction)
             return tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
-        KTF.set_session(get_session(gpu_fraction = cfgs['PickNet']['gpu_fraction']))
 
+    session = get_session()
+    KTF.set_session(session)
     tester = FCNTester('../src/PickNet/fcn/configs/test_config_example_P_pipeline.yaml')
     tester.setup(session)
     tester.setup_testing_for_pipeline(session)
