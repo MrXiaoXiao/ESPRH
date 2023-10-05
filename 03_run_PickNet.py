@@ -33,10 +33,11 @@ if __name__ == '__main__':
     import tensorflow as tf
     import keras.backend.tensorflow_backend as KTF
     
-    if cfgs['PickNet']['limit_gpu_usage']:
-        def get_session(gpu_fraction=0.5):
-            gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=gpu_fraction)
-            return tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
+    # TODO: clean up this part
+    #if cfgs['PickNet']['limit_gpu_usage']:
+    def get_session(gpu_fraction=0.5):
+        gpu_options = tf.GPUOptions(per_process_gpu_memory_fraction=gpu_fraction)
+        return tf.Session(config=tf.ConfigProto(gpu_options=gpu_options))
 
     session = get_session()
     KTF.set_session(session)
